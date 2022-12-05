@@ -1,3 +1,35 @@
 h1 {
   color: red;
 }
+
+/*
+ Css pseudo classes
+ Css pseudo classes are used to style a special state of an HTML element
+
+ use cases:
+ 1)to style html links for when the link is visited or not visited
+ 2)to style a link when it is clicked or activated
+ 3)Used to style html element differently when the mouse is hovered over it
+*/
+
+/* lets target our anchor tag */
+a:link {
+  color: rebeccapurple;
+}
+/* this style will apply incase the link was not cisited yet! */
+a:visited {
+  color: green;
+}
+/* the style will apply only when the link is visited */
+a:active {
+  color: aqua;
+}
+/* the style will apply only when you are clicking the link */
+a:hover {
+  color: chartreuse;
+}
+/* this will only change the color of the  link when you hover over it*/
+.container:active {
+  background-color: blueviolet;
+}
+/* this will change the background color of the div with  class="container" when you click o it */
