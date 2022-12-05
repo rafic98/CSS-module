@@ -92,3 +92,52 @@
         second option is horizontaly
         -options:
             bottom, center, top
+
+# more css Properties:
+
+## Padding:
+
+    padding: ;
+        padding is the space between the content and the border of an element
+        there is padding-top, padding-right, padding-bottom, and padding-left
+        this can also be done by listing the values in a clockwise manner example:
+        padding: 2px 2px 2px 2px;
+        the first 2 px is for the top
+        second one is for the right
+        third one is for the bottom
+        fourth is for te left
+
+        values can be in absolute and relative units
+
+## Margin
+
+    margin: ;
+        margin is the space between the border of an element and its surrounding, the elment borders dont touchm, but different element margins touch
+        margin can have also margin-top, margin-right, margin-bottom, and margin-left
+
+        clockwise rule applies
+
+        values can be in absolute and relative units
+
+## Border
+
+    border: ;
+        border, as the name indecates, is the border of an element
+        to make a border visible, we need to add its color eg:
+        border: 5px solid black;
+        all three values make a border
+        first value is the width of the border
+        clockwise rule applies
+        second value is the type of the border:solid dotted etc...
+        third value is for the border color
+
+### border properties
+
+    border-radius: ;
+    takes values in length and % values
+    it can take up to four values following the clockwise rule
+    also they can be specified in this way
+    border-top-left: ;
+    broder-top-right: ;
+    border-bottom-right: ;
+    border-bottom-left: ;
