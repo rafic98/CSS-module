@@ -49,9 +49,134 @@
       <p class="greenText">Same for me!</p>
     </div>
     <div>
-      <h1 class="purpleText">hello</h1>
       <h2 class="purpleText">i wont be purple</h2>
       <h3 class="purpleText">i will only be purple</h3>
+    </div>
+
+    <!-- ================Targeting nested html elements====================== -->
+    <!-- the style is used in the body just for the sake of making the code clearer, it is always better practice to use style tag in head tag! -->
+    <style>
+      /* whenever you need to target an html element using its parent, you can simply type the selectors for the parent and the child, and seperate them by a space */
+      div h4 {
+        color: rgb(207, 14, 46);
+      }
+    </style>
+    <h4>My color wont change since im outside the div parent element</h4>
+    <div class="container">
+      <h4>hello world!</h4>
+      <!-- this will change color since it was targeted using its'parent!, all h1 tags targeted inside a div will have such color all h4s that are inside divs are targeted now note that the h1 can be inside another div inside the parent div and this will also work! -->
+      <div>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam
+        sapiente, deserunt tempora atque tempore veritatis aspernatur nam.
+        Mollitia velit, praesentium officia, eius quia doloremque deserunt,
+        excepturi perspiciatis aliquam rem possimus!
+      </div>
+      <!-- the divs here are considered to be the children of the div with class=container, and are considered siblings to the each other since they're on the same level -->
+      <div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum,
+        corporis aliquam veniam perferendis excepturi libero repellendus.
+        Corrupti laudantium pariatur odio sunt nam voluptatem! Unde perferendis
+        expedita, dicta repellendus vitae voluptatibus.
+      </div>
+    </div>
+    <h1 class="myFooter">Lorem ipsum dolor sit.</h1>
+    <!-- elemments on the same level are considered as siblings -->
+    <!-- the h1 is considered to be the sibling of the div wiht container class, since they're on the same level -->
+
+    <!-- ==========targeting child elements using class values and atributes -->
+
+    <style>
+      .container1 .redText1 {
+        color: red;
+      }
+      /* this will target child elements of elements with class = to container1 and class = red text */
+    </style>
+    <div class="container1">
+      <h5 id="myHeader" class="redText1">Hello world</h5>
+      <div class="myttext1">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis facilis
+        praesentium magni porro. Id aperiam saepe maiores, cupiditate distinctio
+        quas qui natus laborum, non quisquam, ea culpa tempora adipisci facere!
+      </div>
+    </div>
+    <!-- ========targeting child elements using their IDs================== -->
+    <style>
+      .container2 #myHeader2 {
+        color: blueviolet;
+      }
+      /* the first selector is the parent selector, the second one is the child selector */
+    </style>
+    <div class="container2">
+      <h5 id="myHeader2" class="redText2">Hello world</h5>
+      <div class="myttext2">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis facilis
+        praesentium magni porro. Id aperiam saepe maiores, cupiditate distinctio
+        quas qui natus laborum, non quisquam, ea culpa tempora adipisci facere!
+      </div>
+    </div>
+    <!-- Only direct child target -->
+    <style>
+      .container3 > #myHeader3 {
+        color: aquamarine;
+      }
+      /* this will only target the direct child of the element with the parent class */
+    </style>
+    <div class="container3">
+      <h1 id="myHeader3">I am a direct child</h1>
+    </div>
+    <!-- =============targeting sibling elements============ -->
+    <style>
+      .myText3 + .myText4 {
+        color: orange;
+      }
+      /* this will only change the siblings with class mytext4 and not the first class it self note that they should be imidiate neighbours or else they wont change*/
+
+      /* to refer to all sibling elements we swith the (+) sign with (~) sign */
+    </style>
+    <div class="container 4">
+      <div class="myText0">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam veniam
+        amet at? Velit officia animi eum veritatis quas, quia doloribus
+        inventore cumque totam, error in illo modi tenetur! Reiciendis,
+        consectetur?
+      </div>
+      <div class="myText3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, debitis
+        dolor! Sit, neque odit! Exercitationem, fugiat tempora assumenda ratione
+        odio molestiae architecto. Recusandae nulla optio, sit magni at suscipit
+        labore?
+      </div>
+      <div class="myText4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A facilis
+        laboriosam quo. Quibusdam molestias accusamus officiis dolore ipsum
+        magni, beatae nulla excepturi quis, dolorem nesciunt in magnam nemo,
+        placeat rerum.
+      </div>
+    </div>
+
+    <!--============Targeting elements using their attributes============= -->
+    <style>
+      input[type="text"] {
+        border: 2px solid green;
+      }
+      /*
+      1) first you need to type in the selector of the element(the tag name in this case)followed by a pair fo square brackets[]
+
+      2) In the square brackets type in the name of the attributes foolowed by (=) sign and quotation ("") marks holding in the value 
+
+      3) you can target multiple element attributes using the same syntax before the curley braces but you should include a comma(,) between them
+      for example
+      input[type="text"] , input[type="email"]{
+        (enter styles here)
+      }
+      */
+    </style>
+    <div>
+      <input type="text" name="username" id="username" />
+    </div>
+    <div>
+      <input type="email" name="email" id="email" />
+      <!-- the border of this element wont change since the element type was not targeted  -->
     </div>
   </body>
 </html>
