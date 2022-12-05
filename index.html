@@ -5,6 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Css module</title>
+    <style></style>
+    <!-- the style tag is used to define style information for an html document -->
+    <!-- inside the style element, you can specify the CSS styles for different HTML elements on the page -->
+    <!-- Each HTML document can contain multiple style tags, they wil be applied in the order placed in the html document -->
+    <!-- style element can be placed in the body but it is better practice to lace it in the head -->
+    <style>
+      h1 {
+        color: red;
+      }
+      h2 {
+        color: blue;
+      }
+      /* multiple styles can be added for each element */
+    </style>
+    <!-- advantage is reading the code becomes more simple, as well as it is more efficint -->
+
+    <!-- note that using style attributes will overwrite styles written in the style element -->
   </head>
-  <body></body>
+  <body>
+    <h1>I am going to be red since all h1 elements are styled to be red!</h1>
+    <h2>I am going to be blue since all h2 elements are styled to be blue!</h2>
+  </body>
 </html>
