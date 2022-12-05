@@ -10,7 +10,7 @@
     <!-- inside the style element, you can specify the CSS styles for different HTML elements on the page -->
     <!-- Each HTML document can contain multiple style tags, they wil be applied in the order placed in the html document -->
     <!-- style element can be placed in the body but it is better practice to lace it in the head -->
-    <style>
+    <!-- <style>
       h1 {
         color: red;
       }
@@ -18,13 +18,39 @@
         color: blue;
       }
       /* multiple styles can be added for each element */
-    </style>
+    </style>  -->
     <!-- advantage is reading the code becomes more simple, as well as it is more efficint -->
 
     <!-- note that using style attributes will overwrite styles written in the style element -->
+    <style>
+      #myheader {
+        color: red;
+      }
+      /* Id's are targeted using # and then the id name*/
+      .greenText {
+        color: green;
+      }
+      h3.purpleText {
+        color: purple;
+      }
+      /* this will only apply to h3 elements with this class, not other elements */
+    </style>
+    <!-- we can target elements using their id or their class name -->
+    <!-- each element has a unique id, two html elements cannot have the same id -->
   </head>
   <body>
-    <h1>I am going to be red since all h1 elements are styled to be red!</h1>
-    <h2>I am going to be blue since all h2 elements are styled to be blue!</h2>
+    <h1 id="myheader">Hello world</h1>
+    <h1>Lorem, ipsum dolor.</h1>
+    <div>
+      <h2 class="greenText">
+        i am going to be green since my class is targeted
+      </h2>
+      <p class="greenText">Same for me!</p>
+    </div>
+    <div>
+      <h1 class="purpleText">hello</h1>
+      <h2 class="purpleText">i wont be purple</h2>
+      <h3 class="purpleText">i will only be purple</h3>
+    </div>
   </body>
 </html>
