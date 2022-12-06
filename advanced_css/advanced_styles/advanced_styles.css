@@ -1,0 +1,48 @@
+.parent1 {
+  background-color: #e703039f;
+  padding: 20px;
+}
+.parent2 {
+  background-color: aquamarine;
+  padding: 20px;
+  position: relative;
+}
+.child {
+  padding: 10px;
+  width: 600px;
+}
+.child1 {
+  background-color: orange;
+  position: relative;
+  top: 50px;
+  /* it pushes it away from  top by 50px from where it origonally was */
+  left: 100px;
+  /* it pushes it away from the left side 100px of where it origonally was */
+}
+.child2 {
+  background-color: greenyellow;
+}
+
+/* Absolute positioning */
+
+.child3 {
+  background-color: royalblue;
+}
+
+.child4 {
+  background-color: rgba(156, 19, 19, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* added oppacity so that the element under it can be visible */
+
+  /* it moves to create 0 px space from left and top, it doesent go up to the top of the page since its parent  (parent2) has position relative, in case its parent had static position(default) it will go and postion itself relative to the html page itself, and the 0px space is from parent 2 */
+}
+/* you can notice after we changed this, the child 5 is covered by child 4 thats since child 5 and 6 dont consider child 4 and the move up, */
+/* this happens because the position absolute */
+.child5 {
+  background-color: greenyellow;
+}
+.child6 {
+  background-color: royalblue;
+}
