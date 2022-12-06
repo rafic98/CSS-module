@@ -7,6 +7,11 @@
   padding: 20px;
   position: relative;
 }
+
+.parent3 {
+  background-color: cadetblue;
+  padding: 20px;
+}
 .child {
   padding: 10px;
   width: 600px;
@@ -46,3 +51,21 @@
 .child6 {
   background-color: royalblue;
 }
+
+.child7 {
+  background-color: orange;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+/* child 7 will stay fixed on the screen, in case you typed in position fixed without saying where doyou want to fix it in, the element might disappear */
+.child8 {
+  background-color: greenyellow;
+}
+.child9 {
+  background-color: royalblue;
+  position: sticky;
+  bottom: 90px;
+  top: 10px;
+}
+/* this will move the element once it reach 10px away from the screen borders, note that it also only noves inside the parent div */
