@@ -1,0 +1,24 @@
+h1::before {
+  content: "> ";
+  color: aqua;
+}
+/* you can see that before every h1 element the an arrow is added */
+h1::after {
+  content: url(//unsplash.it/32/32);
+  display: block;
+}
+/* display property block will move the image down */
+.child1 p::before {
+  content: '"';
+}
+/* to add an open quote */
+.child1 p::after {
+  content: '"';
+}
+
+.child1 p::before,
+.child1 p::after {
+  color: chartreuse;
+  font-size: 64px;
+}
+/* you can also couple to style easier */
